@@ -1,0 +1,30 @@
+{
+  "name": "hackmud-scripts",
+  "version": "1.0.0",
+  "description": "hackmud scripts",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-uglify": "^3.0.0",
+    "minimist": "^1.2.0",
+    "pump": "^1.0.2",
+    "uglify-es": "^3.0.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraki5525/hackmud.git"
+  },
+  "author": "kraki5525",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kraki5525/hackmud/issues"
+  },
+  "homepage": "https://github.com/kraki5525/hackmud#readme"
+}
