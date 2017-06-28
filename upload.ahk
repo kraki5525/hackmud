@@ -1,3 +1,4 @@
-^j::
-   SendInput, #up test_script{enter}
-Return
+WinActivate ahk_exe hackmud_win.exe
+Send {Raw}# 
+Send up script {Enter}
+Exit
