@@ -4,8 +4,8 @@ var composer = require('gulp-uglify/composer');
 var pump = require('pump');
 var replace = require('gulp-replace');
 var rename = require('gulp-rename');
-
 var minimist = require('minimist');
+var exec = require('child_process').exec;
 
 var uglify = composer(uglify_es, console);
 var knownOptions = {
@@ -31,4 +31,14 @@ gulp.task('compress', function(cb){
 		cb);
 });
 
-gulp.task('default', ['compress']);
+gulp.task('upload', ['compress'], function (cb) {
+  exec('"C:/Program Files/AutoHotkey/AutoHotkey.exe" upload.ahk', function (err, stdout, stderr) {
+	  if (err) {
+		console.log(stdout);
+		console.log(stderr);
+	  }
+    cb(err);
+  });
+});
+
+gulp.task('default', ['upload']);
