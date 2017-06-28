@@ -23,7 +23,7 @@
     "url": "git+https://github.com/kraki5525/hackmud.git"
   },
   "author": "kraki5525",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kraki5525/hackmud/issues"
   },
