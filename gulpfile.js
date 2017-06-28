@@ -25,7 +25,7 @@ gulp.task('compress', function(cb){
 		}),
 		replace('function ___(','function ('),
 		replace('hackmud.s', '#s'),
-		rename('test_script.js'),
+		rename('script.js'),
 		gulp.dest('./')
 		],
 		cb);
