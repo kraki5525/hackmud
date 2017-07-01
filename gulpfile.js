@@ -14,6 +14,7 @@ var knownOptions = {
 };
 
 var options = minimist(process.argv.slice(2));
+var output = options.output || "script";
 
 gulp.task("compress", function(cb) {
   pump(
@@ -26,7 +27,7 @@ gulp.task("compress", function(cb) {
       }),
       replace("function ___(", "function ("),
       replace("hackmud.s", "#s"),
-      rename("script.js"),
+      rename(output + ".js"),
       gulp.dest("./")
     ],
     cb
@@ -34,7 +35,7 @@ gulp.task("compress", function(cb) {
 });
 
 gulp.task("upload", ["compress"], function(cb) {
-  exec('"C:/Program Files/AutoHotkey/AutoHotkey.exe" upload.ahk', function(
+  exec('"C:/Program Files/AutoHotkey/AutoHotkey.exe" upload.ahk ' + output, function(
     err,
     stdout,
     stderr
