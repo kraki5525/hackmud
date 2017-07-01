@@ -38,11 +38,6 @@ function (c, a)
 		r = a.t.call(p) // call the script to get the npc locs
         if((typeof r)[0]!="s")
             b.push(r)
-        /*
-		_(r, g => { // for each npc loc push it in the results array
-			b.push(g)
-		})
-        */
 	})
 	
 	return b
