@@ -1,4 +1,4 @@
-function(c, arg) { //start:0, pages:1
+function (c, arg) { //start:0, pages:1
     function is_npc(name) {
         var last_action = #s.users.last_action({
             name: [name, 'gibson']
