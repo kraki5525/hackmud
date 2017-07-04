@@ -22,11 +22,13 @@ gulp.task("compress", function(cb) {
       gulp.src(options.script + "/script.js"),
       replace(/^function \(/, "function ___("),
       replace("#s", "hackmud.s"),
+      replace("#D", "hackmud.d"),
       uglify({
         output: { comments: true }
       }),
       replace("function ___(", "function ("),
       replace("hackmud.s", "#s"),
+      replace("hackmud.d", "#D"),
       rename(output + ".js"),
       gulp.dest("./")
     ],
