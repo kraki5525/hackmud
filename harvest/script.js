@@ -37,7 +37,10 @@ function (c, a)
 		p[k] = j
 		r = a.t.call(p) // call the script to get the npc locs
         if((typeof r)[0]!="s")
-            b.push(r)
+			_(r, c => {
+				if (#s.scripts.get_level({ name: c }) === 4)
+				b.push(`dentist_cat.lockpick{t:#s.${c}}`)
+			})			
 	})
 	
 	return b
