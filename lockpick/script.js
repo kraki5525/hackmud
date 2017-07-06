@@ -19,7 +19,7 @@ function (c, a) {
                 }
             })
             throw 0;
-        },
+        }, 
         result = a.t.call(arg),
         locks = {
             [ez21]: ez_21,
