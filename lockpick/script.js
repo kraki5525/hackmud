@@ -2,7 +2,7 @@ function (c, a) {
     var names = ['open', 'unlock', 'release'],
         colors = ['red', 'blue', 'green', 'orange', 'yellow', 'cyan', 'purple', 'lime'],
         primes = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97],
-        keys = ['tvfkyq'],
+        keys = ['tvfkyq','vc2c7q'],
         locked = /correct/,
         ez21 = 'EZ_21',
         ez35 = 'EZ_35',
@@ -43,7 +43,10 @@ function (c, a) {
         }
     }
     catch (e) {
-        return {isOk: false,msg:result};
+        return {isOk: false,msg:{
+            result: result,
+            args: arg}
+        };
     }
 
     return {isOk: true,msg: result};
@@ -72,7 +75,7 @@ function (c, a) {
 
     function ez_35() {
         _n(names, ez35);
-        _n([...Array(5).keys()], "digit");
+        _n([...Array(10).keys()], "digit");
     }
 
     function ez_40() {
