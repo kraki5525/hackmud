@@ -2,7 +2,7 @@ function (c, a) {
     var names = ['open', 'unlock', 'release'],
         colors = ['red', 'blue', 'green', 'orange', 'yellow', 'cyan', 'purple', 'lime'],
         primes = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97],
-        keys = ['tvfkyq','vc2c7q'],
+        keys = ['tvfkyq','vc2c7q','xwz7ja'],
         locked = /correct/,
         ez21 = 'EZ_21',
         ez35 = 'EZ_35',
@@ -35,7 +35,8 @@ function (c, a) {
 
     try {
         while (/LOCK_ERROR/.test(result)) {
-            var lock = Object.keys(locks).find(lock => (new RegExp(lock + '.*lock\.')).test(result));
+            
+            var lock = Object.keys(locks).find(lock => (new RegExp('Denied.*' + lock)).test(result));
             if (lock)
                 locks[lock]();
             else
